@@ -11,6 +11,7 @@ async function getNotionData() {
       'content-type': 'application/json',
       Authorization: `Bearer ${process.env.NOTION_TOKEN}`,
     },
+    cache: 'no-store',
     body: JSON.stringify({
       sorts: [{ "property": "Name", "direction": "ascending" }],
       page_size: 100
