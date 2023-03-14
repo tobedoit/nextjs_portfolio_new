@@ -16,10 +16,10 @@ async function getNotionData() {
       page_size: 100
     }),
     /* https://nextjs.org/blog/next-13#server-components */
-    // cache: 'no-store', /* default: cache: 'force-cache' */
+    cache: 'no-store', /* default: cache: 'force-cache' */
 
     /* html이 만들어지고 10초 동안은 사용자에게 같은 html파일을 그대로 응답한다. 10초가 지나고 GET 요청이 오면, 기존 html을 응답하면서 동시에 새로운 html을 regenerate 한다. 그리고 다음 GET 요청부터는 갱신된 html 문서를 응답한다. */
-    next: { revalidate: 10 },
+    // next: { revalidate: 10 },
   };
 
   const response = await fetch(`https://api.notion.com/v1/databases/${process.env.NOTION_DATABASE_ID}/query`, options);
