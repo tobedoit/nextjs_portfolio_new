@@ -1,3 +1,4 @@
+// // https://www.youtube.com/watch?v=KvoFvmu5eRo
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import Hero from '@/components/hero'
